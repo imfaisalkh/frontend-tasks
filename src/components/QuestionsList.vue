@@ -85,11 +85,115 @@ const questions = computed(() => {
 
   // JS Questions
   if (props.domain === "js") {
+    switch (props.task) {
+      case "1": {
+        results = [
+          {
+            title: "Create an array with only product names",
+          },
+          {
+            title:
+              "Create an array which only includes products which are in stock",
+          },
+          {
+            title:
+              "Find and return object of the product with name 'Product # 3'",
+          },
+          {
+            title: "Return index of product with 47 price",
+          },
+          {
+            title: "Calculate total cart value using reduce method",
+          },
+          {
+            title:
+              "Iterate through each array item and print it's index in the console",
+          },
+          {
+            title:
+              "Select second last item in the array; assuming length of the array would be dynamic",
+          },
+          {
+            title:
+              "Return a boolean after checking if all items in the cart is in stock e.g. `areAllProductsInStock`",
+          },
+          {
+            title:
+              "Return a boolean after checking if any item in the cart has a price more than $100. e.g. `isAnyProductExpensive`",
+          },
+          {
+            title:
+              "Create an array with same length and items but in reverse order",
+          },
+        ];
+        break;
+      }
+
+      case "2": {
+        results = [
+          {
+            title:
+              "Use array de-structuring  to name each role as `role1`, `role2` and `role3`",
+          },
+          {
+            title: "Check if the array has the moderator role",
+          },
+          {
+            title:
+              "Add a new user role named 'guest' at start and end of array",
+          },
+          {
+            title: "Remove one user role from start and end of array",
+          },
+        ];
+        break;
+      }
+
+      case "3": {
+        results = [
+          {
+            title: "Create a flat array having only unique items in the array",
+          },
+        ];
+        break;
+      }
+
+      case "promise-1": {
+        results = [
+          {
+            title:
+              "How wait for all promises to be full-filled before moving forward? (do in parallel)",
+          },
+          {
+            title:
+              "How wait for any promise to be full-filled before moving forward?",
+          },
+          {
+            title:
+              "How wait for all promises to be settled before moving forward.",
+          },
+        ];
+        break;
+      }
+
+      case "promise-2": {
+        results = [
+          {
+            title:
+              "What would be the order of console statements in case of promise failure?",
+          },
+          {
+            title: "Write async/await alternative of the above code",
+          },
+        ];
+        break;
+      }
+    }
   }
 
   // VUE Questions
-  if (props.domain === "vue") {
-  }
+  // if (props.domain === "vue") {
+  // }
 
   return results;
 });
@@ -99,12 +203,15 @@ const questions = computed(() => {
   <hr />
   <div class="questions">
     <h2>{{ props.title }}</h2>
+    <div class="context">
+      <slot name="context"> </slot>
+    </div>
     <ol class="questions-list">
       <li v-for="(question, idx) in questions" :key="idx">
         <p>
           {{ question.title }}
         </p>
-        <img :src="question.image" />
+        <img v-if="question.image" :src="question.image" />
       </li>
     </ol>
   </div>
@@ -114,6 +221,16 @@ const questions = computed(() => {
 .container {
   max-width: 800px;
   margin: 0 auto;
+}
+
+pre {
+  // background: #e1e1e1;
+}
+
+.context {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
 }
 
 hr {
