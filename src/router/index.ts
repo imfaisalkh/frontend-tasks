@@ -4,6 +4,13 @@ import { createRouter, createWebHistory } from "vue-router";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    // Index
+    {
+      path: "/",
+      name: "index",
+      component: () => import("../views/Index.vue"),
+    },
+
     // CSS Routes
     {
       path: "/css/task-1",
@@ -36,6 +43,11 @@ const router = createRouter({
       path: "/js/web-storage",
       name: "js-web-storage",
       component: () => import("../views/js/WebStorage.vue"),
+    },
+    {
+      path: "/js/misc",
+      name: "js-misc",
+      component: () => import("../views/js/Misc.vue"),
     },
 
     // Vue

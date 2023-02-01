@@ -2,6 +2,77 @@
 // Import Components
 import QuestionsList from "../../components/QuestionsList.vue";
 
+// Questions Set # 1
+const questions = [
+  {
+    title: "Create an array with only product names",
+  },
+  {
+    title: "Create an array which only includes products which are in stock",
+  },
+  {
+    title: "Find and return object of the product with name 'Product # 3'",
+  },
+  {
+    title: "Return index of product with 47 price",
+  },
+  {
+    title: "Calculate total cart value using reduce method",
+  },
+  {
+    title:
+      "Iterate through each array item and print it's index in the console",
+  },
+  {
+    title:
+      "Select second last item in the array; assuming length of the array would be dynamic",
+  },
+  {
+    title:
+      "Return a boolean after checking if all items in the cart is in stock e.g. `areAllProductsInStock`",
+  },
+  {
+    title:
+      "Return a boolean after checking if any item in the cart has a price more than $100. e.g. `isAnyProductExpensive`",
+  },
+  {
+    title: "Create an array with same length and items but in reverse order",
+  },
+];
+
+// Questions Set # 2
+const questions2 = [
+  {
+    title:
+      "Use array de-structuring  to name each role as `role1`, `role2` and `role3`",
+  },
+  {
+    title: "Check if the array has the moderator role",
+  },
+  {
+    title: "Add a new user role named 'guest' at start and end of array",
+  },
+  {
+    title: "Remove one user role from start and end of array",
+  },
+];
+
+// Questions Set # 3
+const questions3 = [
+  {
+    title: "Create a flat array having only unique items in the array",
+  },
+];
+
+// Questions Set # 4
+const questions4 = [
+  {
+    title:
+      "What is the difference between pop() and at() methods in given context",
+    image: "../src/assets/js-array-pop-at.png",
+  },
+];
+
 // Define Data
 const cartItems = [
   { name: "Product # 1", quantity: 1, price: 27, in_stock: true },
@@ -51,7 +122,7 @@ const numbers = [0, [1, 2, 3], [2, 3, 4]];
   <div class="container">
     <h1>Arrays</h1>
 
-    <questions-list title="Task # 1" domain="js" task="1" :result="r1">
+    <questions-list title="Task # 1" :data="questions">
       <template #context>
         Given this array...
 
@@ -67,7 +138,7 @@ const numbers = [0, [1, 2, 3], [2, 3, 4]];
       </template>
     </questions-list>
 
-    <questions-list title="Task # 2" domain="js" task="2" :result="r1">
+    <questions-list title="Task # 2" :data="questions2">
       <template #context>
         Given this array...
 
@@ -77,7 +148,7 @@ const numbers = [0, [1, 2, 3], [2, 3, 4]];
       </template>
     </questions-list>
 
-    <questions-list title="Task # 3" domain="js" task="3" :result="r1">
+    <questions-list title="Task # 3" :data="questions3">
       <template #context>
         Given this array...
 
@@ -86,5 +157,7 @@ const numbers = [0, [1, 2, 3], [2, 3, 4]];
         </pre>
       </template>
     </questions-list>
+
+    <questions-list title="Task # 4" :data="questions4"> </questions-list>
   </div>
 </template>
