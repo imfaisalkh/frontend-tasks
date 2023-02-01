@@ -188,6 +188,61 @@ const questions = computed(() => {
         ];
         break;
       }
+
+      // Web Storage
+      case "webstorage-1": {
+        results = [
+          {
+            title: "Set `is_auth` as `true` in local storage",
+          },
+          {
+            title:
+              "Get `is_auth` value from local storage and check if its truthy or falsey",
+          },
+          {
+            title: "Update `is_auth` value to `false`",
+          },
+          {
+            title: "Delete `is_auth` variable from local storage",
+          },
+        ];
+        break;
+      }
+
+      case "webstorage-2": {
+        results = [
+          {
+            title: "How local storage differs from session storage or cookies?",
+          },
+        ];
+        break;
+      }
+    }
+  }
+
+  // VUE Questions
+  if (props.domain === "vue") {
+    switch (props.task) {
+      case "vue-1": {
+        results = [
+          {
+            title: "Fetch data from following endpoints: `GET api/v1/bookings`",
+          },
+          {
+            title:
+              "Create a table in the UI and map each booking grouped by service",
+          },
+          {
+            title:
+              "Transform data as per UI requirements (grouping; format date/time)",
+          },
+          {
+            title:
+              "Show reactive state of data (fetching; loaded; no-data) in the UI",
+          },
+        ];
+        break;
+      }
     }
   }
 

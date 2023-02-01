@@ -32,6 +32,18 @@ const router = createRouter({
       name: "js-promises",
       component: () => import("../views/js/Promises.vue"),
     },
+    {
+      path: "/js/web-storage",
+      name: "js-web-storage",
+      component: () => import("../views/js/WebStorage.vue"),
+    },
+
+    // Vue
+    {
+      path: "/vue/task-1",
+      name: "vue-task-1",
+      component: () => import("../views/vue/Task-1.vue"),
+    },
   ],
 });
 
