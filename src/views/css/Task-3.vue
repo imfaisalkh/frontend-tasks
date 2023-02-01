@@ -11,7 +11,7 @@ const questions = [
   },
   {
     title: "What is different between following two rules..",
-    image: "https://gcdnb.pbrd.co/images/Z4TNTB4KXXOe.jpg?o=1",
+    image: "../src/assets/css-siblings.png",
   },
 ];
 </script>
