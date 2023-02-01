@@ -46,9 +46,24 @@
       </ol>
     </div>
   </div>
+
+  <div class="notes">
+    <p>
+      Note: Please clone the repo from the following link and perform the tasks
+      in your local IDE..
+    </p>
+    <a href="https://github.com/imfaisalkh/frontend-tasks"
+      >https://github.com/imfaisalkh/frontend-tasks</a
+    >
+  </div>
 </template>
 
 <style lang="scss">
+.notes {
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
 .questions-set {
   display: flex;
   flex-wrap: wrap;
