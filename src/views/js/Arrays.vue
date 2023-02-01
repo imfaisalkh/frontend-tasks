@@ -69,11 +69,11 @@ const questions4 = [
   {
     title:
       "What is the difference between pop() and at() methods in given context",
-    image: "../src/assets/js-array-pop-at.png",
+    image: new URL("/src/assets/js-array-pop-at.png", import.meta.url),
   },
   {
     title: "What is the result of following code; explain",
-    image: "../src/assets/js-array-comparison.png",
+    image: new URL("/src/assets/js-array-comparison.png", import.meta.url),
   },
 ];
 
@@ -126,7 +126,7 @@ const numbers = [0, [1, 2, 3], [2, 3, 4]];
   <div class="container">
     <h1>Arrays</h1>
 
-    <questions-list title="Task # 1" :data="questions">
+    <questions-list title="Task # 1" :data="questions" full-width>
       <template #context>
         Given this array...
 
@@ -142,7 +142,7 @@ const numbers = [0, [1, 2, 3], [2, 3, 4]];
       </template>
     </questions-list>
 
-    <questions-list title="Task # 2" :data="questions2">
+    <questions-list title="Task # 2" :data="questions2" full-width>
       <template #context>
         Given this array...
 
@@ -152,7 +152,7 @@ const numbers = [0, [1, 2, 3], [2, 3, 4]];
       </template>
     </questions-list>
 
-    <questions-list title="Task # 3" :data="questions3">
+    <questions-list title="Task # 3" :data="questions3" full-width>
       <template #context>
         Given this array...
 
@@ -162,6 +162,6 @@ const numbers = [0, [1, 2, 3], [2, 3, 4]];
       </template>
     </questions-list>
 
-    <questions-list title="Task # 4" :data="questions4"> </questions-list>
+    <questions-list title="Task # 4" :data="questions4" full-width />
   </div>
 </template>

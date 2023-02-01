@@ -5,15 +5,15 @@ import QuestionsList from "../../components/QuestionsList.vue";
 const questions = [
   {
     title: "Refactor this code to shorthand version",
-    image: "../src/assets/shorthand-js.png",
+    image: new URL("/src/assets/shorthand-js.png", import.meta.url),
   },
   {
     title: "Refactor this line with template literals",
-    image: "../src/assets/js-template-literal.png",
+    image: new URL("/src/assets/js-template-literal.png", import.meta.url),
   },
   {
     title: "What is the result of following expression? explain.",
-    image: "../src/assets/js-typeof.png",
+    image: new URL("/src/assets/js-typeof.png", import.meta.url),
   },
 ];
 </script>

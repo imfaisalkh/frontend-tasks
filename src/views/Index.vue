@@ -64,10 +64,18 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .notes {
   max-width: 1000px;
   margin: 30px auto;
+}
+
+.questions {
+  width: 400px;
+  background: #e1e1e1;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 30px;
 }
 
 .questions-set {

@@ -9,14 +9,17 @@ const props = defineProps({
     type: Array,
     required: true,
   },
+  fullWidth: {
+    type: Boolean,
+    default: true,
+  },
 });
 </script>
 
 <template>
-  <hr />
-  <div class="questions">
+  <div class="questions" :class="{ 'is-full-width': props.fullWidth }">
     <h2>{{ props.title }}</h2>
-    <div class="context">
+    <div class="context" v-if="$slots.context">
       <slot name="context"> </slot>
     </div>
     <ol class="questions-list">
@@ -32,8 +35,34 @@ const props = defineProps({
 
 <style lang="scss">
 .container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  .workspace {
+    flex: 1;
+  }
+
+  .questions {
+    width: 400px;
+    background: #e1e1e1;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 30px;
+
+    &.is-full-width {
+      width: 100%;
+      max-width: 700px;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+  }
 }
 
 pre {
@@ -48,16 +77,6 @@ pre {
 
 hr {
   margin-top: 30px;
-}
-.questions {
-  background: #e1e1e1;
-  padding: 15px;
-  border-radius: 8px;
-  margin-top: 30px;
-
-  h1 {
-    margin-top: 0;
-  }
 }
 
 .questions-list {
