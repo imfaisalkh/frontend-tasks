@@ -41,7 +41,13 @@
 
       <ol class="questions-nav">
         <li>
-          <RouterLink to="/vue/task-1">Task # 1</RouterLink>
+          <RouterLink to="/vue/task-1">Task: Fetch & Rendering</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/vue/task-2">Task: DRY Code</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/vue/task-3">Task: Search Functionality</RouterLink>
         </li>
       </ol>
     </div>

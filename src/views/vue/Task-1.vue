@@ -32,7 +32,7 @@ const questions = [
 
 <template>
   <div class="container">
-    <h2>Demo</h2>
+    <h1>Vue</h1>
 
     <!-- Plz Ignore this -->
     <questions-list title="Task 1: Fetch & Rendering" :data="questions">

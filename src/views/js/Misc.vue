@@ -11,6 +11,10 @@ const questions = [
     title: "Refactor this line with template literals",
     image: "../src/assets/js-template-literal.png",
   },
+  {
+    title: "What is the result of following expression? explain.",
+    image: "../src/assets/js-typeof.png",
+  },
 ];
 </script>
 

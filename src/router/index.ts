@@ -56,6 +56,16 @@ const router = createRouter({
       name: "vue-task-1",
       component: () => import("../views/vue/Task-1.vue"),
     },
+    {
+      path: "/vue/task-2",
+      name: "vue-task-2",
+      component: () => import("../views/vue/Task-2.vue"),
+    },
+    {
+      path: "/vue/task-3",
+      name: "vue-task-3",
+      component: () => import("../views/vue/Task-3.vue"),
+    },
   ],
 });
 
