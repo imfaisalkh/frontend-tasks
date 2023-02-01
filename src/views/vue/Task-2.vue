@@ -35,7 +35,7 @@ const questions2 = [
     <h1>Vue</h1>
 
     <!-- Plz Ignore this -->
-    <questions-list title="Task 2.1: DRY Logic" :data="questions" />
-    <questions-list title="Task 2.2: DRY Template" :data="questions2" />
+    <questions-list title="Task 2.1: Reuse Logic" :data="questions" />
+    <questions-list title="Task 2.2: Reuse UI" :data="questions2" />
   </div>
 </template>

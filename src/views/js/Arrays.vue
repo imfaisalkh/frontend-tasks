@@ -71,6 +71,10 @@ const questions4 = [
       "What is the difference between pop() and at() methods in given context",
     image: "../src/assets/js-array-pop-at.png",
   },
+  {
+    title: "What is the result of following code; explain",
+    image: "../src/assets/js-array-comparison.png",
+  },
 ];
 
 // Define Data
